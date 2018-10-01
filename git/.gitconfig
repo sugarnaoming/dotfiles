@@ -1,0 +1,47 @@
+[user]
+	email = sakigithub@gmail.com
+	name = sugarnaoming
+[core]
+  editor = nvim
+[color]
+  ui = true
+[alias]
+  c = clone
+  s = status
+  st = stash
+  stl = stash list
+  stp = stash pop
+  p = push
+  pf = push --force
+  pu = pull
+  pup = pull --prune
+  co = checkout
+  cob = checkout -b
+  cp = cherry-pick
+  cpc = cherry-pick --continue
+  b = branch
+  ba = branch -a
+  bd = branch -d
+  bdf = branch -D
+  bm = branch -m
+  a = add
+  ap = add -p
+  m = merge
+  mnf = merge --no-ff
+  reb = rebase
+  rebid = rebase --ignore-date
+  rebi = rebase -i
+  rebc = rebase --continue
+  reba = rebase --abort
+  rem = remote
+  remv = remote -v
+  remp = remote prune
+  res = reset
+  resh = reset --hard
+  ress = reset --soft
+  cm = commit
+  cma = commit --amend
+  cmm = commit -m
+  f = fetch
+  fa = fetch --all
+  fap = fetch --all --prune
