@@ -2,7 +2,7 @@
 	email = sakigithub@gmail.com
 	name = sugarnaoming
 [core]
-  editor = nvim
+  editor = vim
 [color]
   ui = true
 [alias]
@@ -45,3 +45,8 @@
   f = fetch
   fa = fetch --all
   fap = fetch --all --prune
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f

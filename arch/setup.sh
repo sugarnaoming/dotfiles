@@ -6,69 +6,47 @@ cd ~
 # git setting #
 ###############
 # git install
-#sudo apt install git -y
 # dotfiles get
 dofilesurl=''
 cd ~
 git clone $dotfilesurl dotfiles
-ln -sf ~/dotfiles/git/.gitconfig
 
 ###############
 # vim setting #
 ###############
 # vim install
-sudo apt install vim -y
-cd ~
-ln -s ~/dotfiles/vim/.vimrc
+sudo pacman -S vim # Arch linux commnad
 
 ####################
 # Terminal setting #
 ####################
 # guake install
-git clone https://github.com/Guake/guake.git ~/Downloads/guake
-cd ~/Download/guake
-./scripts/bootstrap-dev-debian.sh run make
-sudo apt install python3-setuptools
-make
-sudo make install
-rm -rf ~/Downloads/guake
+sudo pacman -S guake # Arch linux command
 
 ######################
 # fish shell setting #
 ######################
 # fish shell install
-sudo apt-add-repository ppa:fish-shell/release-2 -y
-sudo apt update
-sudo apt install fish
-chsh -s /usr/bin/fish nsato
-cd ~/.config/fish
-ln -s ~/dotfiles/fish/config.fish
+sudo pacman -S fish # Arch linux command
 # fisherman
 curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
 # fisherman plugin install
 fisher oh-my-fish/plugin-balias
 fisher oh-my-fish/theme-bira
 
+#################
+# Fcitx setting #
+#################
+# Fcitx install
+sudo pacman -S fcitx-im fcitx-mozc
+cd ~
+ln -s ~/dotfiles/arch/fcitx/.xprofile
+
 ################
 # tmux setting #
 ################
 # tmux dep install
-sudo apt install autoconf libtool pkg-config automake libevent-dev libncurses5-dev
 # tmux install
-git clone https://github.com/tmux/tmux.git ~/Downloads/tmux
-cd ~/Downloads/tmux
-version=`git tag | sort -V | tail -n 1`
-git checkout -b $version refs/tags/$version
-./autogen.sh
-./configure
-make
-sudo make install
-
-#################
-# fcitx setting #
-#################
-# gui install
-sudo apt install fcitx-config-gtk
 
 ###############
 # tig setting #

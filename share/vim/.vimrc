@@ -31,3 +31,8 @@ set shiftwidth=2
 "Search
 set incsearch
 set hlsearch
+
+let _curfile=expand("%:r")
+if _curfile == 'Makefile'
+  set noexpandtab
+endif
