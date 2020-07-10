@@ -21,12 +21,14 @@
   cpc = cherry-pick --continue
   b = branch
   ba = branch -a
+  bav = branch -a -vvv
   bd = branch -d
   bdf = branch -D
   bm = branch -m
   a = add
   ap = add -p
   m = merge
+  ma = merge --abort
   mnf = merge --no-ff
   reb = rebase
   rebid = rebase --ignore-date
@@ -41,12 +43,16 @@
   ress = reset --soft
   cm = commit
   cma = commit --amend
+  cam = commit --allow-empty -m
   cmm = commit -m
   f = fetch
   fa = fetch --all
   fap = fetch --all --prune
+  rev = revert
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
+[url "git@github.com:"]
+    insteadOf = https://github.com/
